@@ -29,11 +29,12 @@ class SendRegistrationDataToCodeIgniter
             'email' => $user->email,
             'password' => $user->passwordview
         ];
-        $response = Http::post('http://codelara/register', $registrationData);
-        if ($response->successful()) {
+        $response = Http::post('http://localhost/codelara/index.php/register', $registrationData);
             return "success";
-        } else {
-           return "failed";
-        }
+            if ($response->successful()) {
+           
+            } else {
+                
+            }
     }
 }

@@ -19,10 +19,8 @@ class CustomRegisterController extends Controller
         $this->validator($request->all())->validate();
 
         $user = $this->create($request->all());
-        dd($user->name);
         event(new SendRegistrationToCodeIgniter($user));
-
-        // You can customize the response or redirection here
+        return redirect()->route('dashboard');
     }
 
     protected function create(array $data)
