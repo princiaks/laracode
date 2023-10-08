@@ -7,8 +7,19 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg max-w-7xl mx-auto p-6 lg:p-8" style="height: 250px"  >
+                <div class="">
+                    <div class="flex justify-center">
+                        <img src="{{ asset('images/womennovatorlogo.png') }}" alt="Womennovator" style="width: 146px;
+                        height: 85px;">
+                    </div>
+    
+                    <div class="mt-16">
+                       <h4 class="font-semibold text-red-600 flex justify-center">Welcome to Dashboard!!</h4>
+                    </div>
+    
+                    
+                </div>
             </div>
         </div>
     </div>

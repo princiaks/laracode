@@ -21,15 +21,15 @@ class SendRegistrationDataToCodeIgniter
      * Handle the event.
      */
     public function handle(SendRegistrationToCodeIgniter  $event)
-    {
+    {        
         $user = $event->user;
-        // Prepare registration data from the $user object
         $registrationData = [
             'name' => $user->name,
             'email' => $user->email,
             'password' => $user->passwordview
         ];
-        $response = Http::post('http://localhost/codelara/index.php/register', $registrationData);
+        $response = Http::withHeaders(['Content-Type' => 'application/json'])
+        ->post('http://localhost/codelara/index.php/register', json_encode($registrationData));
             return "success";
             if ($response->successful()) {
            
